@@ -1,28 +1,32 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
+import Posts from "./Posts";
 
 function App() {
-  const [message, setMessage] = useState("");
+  //   const [posts, setPosts] = useState([]);
 
-  useEffect(() => {
-    fetch("/api")
-      .then((response) => response.text())
-      .then((data) => setMessage(data));
-  }, []);
+  //   useEffect(() => {
+  //     fetch("/posts")
+  //       .then((response) => response.json())
+  //       .then((data) => {
+  //         setPosts(data); // Guardar los posts en el estado
+  //       });
+  //   }, []);
 
-  useEffect(() => {
-    fetch("/api/posts")
-      .then((response) => response.json())
-      .then((data) => {
-        // Manejar los datos de los posts
-      });
-  }, []);
+  //   return (
+  //     <div className="App">
+  //       <h1>Bienvenido al Rincon de Marcos!</h1>
+  //       <ul>
+  //         {posts.map((post, index) => (
+  //           <li key={index}>{post.title}</li>
+  //         ))}
+  //       </ul>
+  //     </div>
+  //   );
 
-  return (
-    <div className="App">
-      <h1>Mensaje de prueba</h1>
-      <h1>{message}</h1>
-    </div>
-  );
+  <div>
+    <h1>Crear Post</h1>
+    <Posts />
+  </div>;
 }
 
 export default App;

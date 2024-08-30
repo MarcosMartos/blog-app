@@ -16,11 +16,11 @@ app.listen(PORT, () => {
 
 const posts = [];
 
-app.get("/api/posts", (req, res) => {
+app.get("/posts", (req, res) => {
   res.json(posts);
 });
 
-app.post("/api/posts", (req, res) => {
+app.post("/posts", (req, res) => {
   const post = req.body;
   posts.push(post);
   res.status(201).json(post);
