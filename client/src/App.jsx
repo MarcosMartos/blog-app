@@ -1,32 +1,12 @@
-// import React, { useEffect, useState } from "react";
-import Posts from "./Posts";
+import PostForm from "./PostForm";
 
 function App() {
-  //   const [posts, setPosts] = useState([]);
-
-  //   useEffect(() => {
-  //     fetch("/posts")
-  //       .then((response) => response.json())
-  //       .then((data) => {
-  //         setPosts(data); // Guardar los posts en el estado
-  //       });
-  //   }, []);
-
-  //   return (
-  //     <div className="App">
-  //       <h1>Bienvenido al Rincon de Marcos!</h1>
-  //       <ul>
-  //         {posts.map((post, index) => (
-  //           <li key={index}>{post.title}</li>
-  //         ))}
-  //       </ul>
-  //     </div>
-  //   );
-
-  <div>
-    <h1>Crear Post</h1>
-    <Posts />
-  </div>;
+  return (
+    <div className="flex flex-col items-center m-10 ">
+      <h1 className="text-2xl m-5">Gestor de Posts</h1>
+      <PostForm />
+    </div>
+  );
 }
 
 export default App;
